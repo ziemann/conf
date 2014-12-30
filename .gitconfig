@@ -1,0 +1,8 @@
+[user]
+	name = ziemann
+	email = ziemann@localhost
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
