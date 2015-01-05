@@ -2,8 +2,8 @@
 git clone https://github.com/ziemann/conf.git
 
 cd conf
-git submodules init
-git submodules update
+git submodule init
+git submodule update
 cd ..
 
 ln -s conf/.gitconfig .gitconfig
