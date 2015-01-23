@@ -16,3 +16,6 @@ nnoremap ? :let @/ = ""<CR>:call gruvbox#hls_show()<CR>?
 
 set expandtab shiftwidth=2 softtabstop=2
 filetype indent plugin on
+
+nnoremap <leader>f gg=G<c-o><c-o>
+
