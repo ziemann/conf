@@ -19,3 +19,7 @@ filetype indent plugin on
 
 nnoremap <leader>f gg=G<c-o><c-o>
 
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
+inoremap jk <esc>
+inoremap <esc> <nop>
