@@ -23,3 +23,4 @@ nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 inoremap jk <esc>
 inoremap <esc> <nop>
+au BufNewFile,BufRead *.hbs set filetype=html

@@ -6,5 +6,6 @@
 	br = branch
 	ci = commit
 	st = status
+        ignored = !git ls-files -v | grep "^[[:lower:]]"
 [push]
 	default = simple
