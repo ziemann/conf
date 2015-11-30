@@ -18,6 +18,7 @@ set expandtab shiftwidth=2 softtabstop=2
 filetype indent plugin on
 
 nnoremap <leader>f gg=G<c-o><c-o>
+nnoremap <Space> za
 
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
