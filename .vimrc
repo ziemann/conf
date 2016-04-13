@@ -1,27 +1,44 @@
 call pathogen#infect()
 
-let g:airline#extensions#tabline#enabled = 1
+" Erscheinungsbild
 set t_Co=256
-
-set number
-
 colorscheme gruvbox
 set background=dark
-nnoremap <silent> [oh :call gruvbox#hls_show()<CR>
-nnoremap <silent> ]oh :call gruvbox#hls_hide()<CR>
-nnoremap <silent> coh :call gruvbox#hls_toggle()<CR>
-nnoremap * :let @/ = ""<CR>:call gruvbox#hls_show()<CR>*
-nnoremap / :let @/ = ""<CR>:call gruvbox#hls_show()<CR>/
-nnoremap ? :let @/ = ""<CR>:call gruvbox#hls_show()<CR>?
+syntax on
+set number
+set laststatus=2
+set noshowmode
 
-set expandtab shiftwidth=2 softtabstop=2
-filetype indent plugin on
+" Mappings
+let mapleader = "\<space>"
 
 nnoremap <leader>f gg=G<c-o><c-o>
-nnoremap <Space> za
-
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
+nnoremap - /
+nnoremap _ /\c
+
 inoremap jk <esc>
 inoremap <esc> <nop>
-au BufNewFile,BufRead *.hbs set filetype=html
+
+" NerdTree
+map <c-n> :NERDTreeToggle<CR>
+
+" Speichern mit Strg-s
+command! -nargs=0 -bar Update if &modified 
+                           \|    if empty(bufname('%'))
+                           \|        browse confirm write
+                           \|    else
+                           \|        confirm write
+                           \|    endif
+                           \|endif
+nnoremap <silent> <C-S> :<C-u>Update<CR>
+inoremap <c-s> <Esc>:Update<CR>
+
+" Filetypes
+autocmd BufNewFile,BufRead *.hbs set filetype=html
+
+set expandtab shiftwidth=2 softtabstop=2
+set path=$PWD/**
+
+filetype indent plugin on
